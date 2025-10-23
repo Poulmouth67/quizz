@@ -10,7 +10,7 @@ let speedSetting = "normal";
 let reviewingMistakes = false;
 let awaitingContinue = false;
 
-// sections DOM
+// Sections DOM
 const menuEl = document.getElementById("menu");
 const configEl = document.getElementById("config");
 const quizEl = document.getElementById("quiz");
@@ -143,47 +143,4 @@ function checkAnswer(){
   recordResult(userRaw,isCorrect);
   validateBtn.disabled=true; skipBtn.disabled=true;
   if(isCorrect){
-    feedbackEl.textContent="✅ Correct !";
-    feedbackEl.className="correct";
-    score++;
-    scoreEl.textContent=`Score: ${score} / ${usedWords.length}`;
-    setTimeout(nextQuestionWithDirection, 1000);
-  } else {
-    awaitingContinue=true;
-    const expected=direction==="de-to-fr"?current.fr:current.de;
-    feedbackEl.innerHTML=`❌ Faux — attendu : <strong>${expected}</strong><div style="margin-top:10px;"><button id="continueBtn" style="padding:8px 12px; border-radius:6px;">Continuer</button></div>`;
-    feedbackEl.className="wrong";
-    document.getElementById("continueBtn").focus();
-    document.getElementById("continueBtn").addEventListener("click",()=>{
-      awaitingContinue=false;
-      scoreEl.textContent=`Score: ${score} / ${usedWords.length}`;
-      nextQuestionWithDirection();
-    });
-  }
-}
-
-// ---- fin de session ----
-function endSession(){
-  quizEl.classList.add("hidden");
-  recapEl.classList.remove("hidden");
-  const mistakes=results.filter(r=>!r.isCorrect);
-  const recapList=document.getElementById("recap");
-  recapList.innerHTML="";
-  results.forEach(r=>{
-    const li=document.createElement("li");
-    li.innerHTML=`${r.isCorrect?"🟢":"🔴"} <strong>${r.direction==="de-to-fr"?r.de:r.fr}</strong> — ta réponse : "${r.given||"—"}" — attendu : "${r.expected}"`;
-    recapList.appendChild(li);
-  });
-  if(reviewingMistakes||mistakes.length===0){reviewBtn.classList.add("hidden");}
-  else {
-    reviewBtn.classList.remove("hidden");
-    reviewBtn.textContent=`Revoir mes fautes (${mistakes.length})`;
-    reviewBtn.onclick=()=>{
-      vocabulary=mistakes.map(m=>({de:m.de,fr:m.fr,direction:m.direction}));
-      total=vocabulary.length; usedWords=[]; results=[]; reviewingMistakes=true; awaitingContinue=false;
-      recapEl.classList.add("hidden");
-      quizEl.classList.remove("hidden");
-      nextQuestionWithDirection();
-    };
-  }
-}
+    f
