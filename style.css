@@ -1,56 +1,63 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f8;
   color: #333;
-  text-align: center;
-  padding: 40px;
-}
-
-h1 { color: #222; margin-bottom: 6px; }
-h2 { color: #555; font-weight: normal; margin-bottom: 12px; }
-
-.menu .buttons, .config-buttons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin: 12px 0 20px;
-}
-
-.theme-btn {
-  padding: 12px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.theme-btn:hover {
-  background: #007bff; color: white; transform: translateY(-3px);
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .hidden { display: none; }
 
-#quiz { max-width: 640px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
-
-#answer { padding: 10px; width: 80%; font-size: 16px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc; }
-
-.controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; }
-
-#validate, #skip, #startSession, #backToMenu {
-  padding: 10px 16px; font-size: 15px; border-radius: 8px; border: none; cursor: pointer;
+#menu, #config, #quiz, #recapSection {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#validate { background: #007bff; color: white; }
-#validate:hover { background: #0056b3; }
-#skip { background: #eee; }
+h1, h2 { margin-bottom: 20px; color: #1f618d; }
+p { margin-bottom: 12px; font-size: 1.1em; }
 
-.correct { color: green; font-weight: bold; }
-.wrong { color: red; font-weight: bold; }
+input[type="text"], input[type="number"], select {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
 
-.topbar { display:flex; justify-content: space-between; margin-bottom: 6px; max-width: 600px; margin-left:auto; margin-right:auto; }
-#recap { text-align: left; max-width: 700px; margin: 18px auto; }
-#recap li { margin-bottom: 6px; }
+button {
+  background: #1f618d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1em;
+}
+
+button:hover { background: #2874a6; transform: translateY(-2px); }
+button:disabled { background: #aaa; cursor: not-allowed; }
+
+#feedback { font-weight: bold; font-size: 1.2em; margin-top: 10px; min-height: 1.5em; }
+.correct { color: #27ae60; }
+.wrong { color: #c0392b; }
+
+#recap li { margin: 6px 0; font-size: 1em; text-align: left; }
+#recap li strong { color: #1f618d; }
+
+@media (max-width: 600px){
+  #menu, #config, #quiz, #recapSection { padding: 20px; }
+  input[type="text"], input[type="number"], select { width: 100%; }
+}
