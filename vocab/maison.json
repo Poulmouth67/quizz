@@ -1,0 +1,17 @@
+[
+  {"de": "das Haus", "fr": "la maison"},
+  {"de": "die Tür", "fr": "la porte"},
+  {"de": "das Fenster", "fr": "la fenêtre"},
+  {"de": "die Küche", "fr": "la cuisine"},
+  {"de": "das Schlafzimmer", "fr": "la chambre"},
+  {"de": "das Wohnzimmer", "fr": "le salon"},
+  {"de": "das Badezimmer", "fr": "la salle de bain"},
+  {"de": "die Treppe", "fr": "l'escalier"},
+  {"de": "der Tisch", "fr": "la table"},
+  {"de": "der Stuhl", "fr": "la chaise"},
+  {"de": "der Schrank", "fr": "l’armoire"},
+  {"de": "der Teppich", "fr": "le tapis"},
+  {"de": "die Lampe", "fr": "la lampe"},
+  {"de": "das Bett", "fr": "le lit"},
+  {"de": "der Spiegel", "fr": "le miroir"}
+]
