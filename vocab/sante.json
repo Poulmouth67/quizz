@@ -1,0 +1,17 @@
+[
+  {"de": "die Gesundheit", "fr": "la santé"},
+  {"de": "der Arzt", "fr": "le médecin"},
+  {"de": "das Krankenhaus", "fr": "l’hôpital"},
+  {"de": "die Apotheke", "fr": "la pharmacie"},
+  {"de": "das Medikament", "fr": "le médicament"},
+  {"de": "die Krankheit", "fr": "la maladie"},
+  {"de": "die Schmerzen", "fr": "les douleurs"},
+  {"de": "der Kopf", "fr": "la tête"},
+  {"de": "der Arm", "fr": "le bras"},
+  {"de": "das Bein", "fr": "la jambe"},
+  {"de": "der Rücken", "fr": "le dos"},
+  {"de": "die Hand", "fr": "la main"},
+  {"de": "die Zähne", "fr": "les dents"},
+  {"de": "das Fieber", "fr": "la fièvre"},
+  {"de": "husten", "fr": "tousser"}
+]
