@@ -1,0 +1,17 @@
+[
+  {"de": "der Sport", "fr": "le sport"},
+  {"de": "laufen", "fr": "courir"},
+  {"de": "schwimmen", "fr": "nager"},
+  {"de": "spielen", "fr": "jouer"},
+  {"de": "trainieren", "fr": "s’entraîner"},
+  {"de": "das Spiel", "fr": "le match / le jeu"},
+  {"de": "der Ball", "fr": "la balle / le ballon"},
+  {"de": "die Mannschaft", "fr": "l’équipe"},
+  {"de": "der Trainer", "fr": "l’entraîneur"},
+  {"de": "der Wettkampf", "fr": "la compétition"},
+  {"de": "das Tor", "fr": "le but"},
+  {"de": "der Sieg", "fr": "la victoire"},
+  {"de": "die Niederlage", "fr": "la défaite"},
+  {"de": "üben", "fr": "pratiquer / s’exercer"},
+  {"de": "gewinnen", "fr": "gagner"}
+]
