@@ -1,59 +1,73 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Quiz Allemand</title>
 <style>
-  .hidden { display:none; }
-  button { margin: 4px; padding:6px 12px; }
-  .correct { color: green; }
-  .wrong { color: red; }
+  /* --- Reset / body --- */
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body { background: #f4f7f8; color: #333; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 20px; }
+
+  /* --- sections --- */
+  #menu, #config, #quiz, #recapSection {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h1, h2 { margin-bottom: 20px; color: #1f618d; }
+  p { margin-bottom: 12px; font-size: 1.1em; }
+
+  /* --- hidden --- */
+  .hidden { display: none; }
+
+  /* --- inputs --- */
+  input[type="text"], input[type="number"], select {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+
+  /* --- boutons --- */
+  button {
+    background: #1f618d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1em;
+  }
+  button:hover {
+    background: #2874a6;
+    transform: translateY(-2px);
+  }
+  button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+
+  /* --- feedback --- */
+  #feedback { font-weight: bold; font-size: 1.2em; margin-top: 10px; min-height: 1.5em; }
+  .correct { color: #27ae60; }
+  .wrong { color: #c0392b; }
+
+  /* --- recap --- */
+  #recap li { margin: 6px 0; font-size: 1em; text-align: left; }
+  #recap li strong { color: #1f618d; }
+
+  /* --- responsive --- */
+  @media (max-width: 600px){
+    #menu, #config, #quiz, #recapSection {
+      padding: 20px;
+    }
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+    }
+  }
 </style>
-</head>
-<body>
-
-<div id="menu">
-  <h1>Choisis un thème</h1>
-  <button class="theme-btn" data-theme="maison">Maison</button>
-  <button class="theme-btn" data-theme="sport">Sport</button>
-  <button class="theme-btn" data-theme="sante">Santé</button>
-  <button class="theme-btn" data-theme="ecole">École</button>
-  <button class="theme-btn" data-theme="general">Général</button>
-</div>
-
-<div id="config" class="hidden">
-  <h2 id="config-title"></h2>
-  <label for="nbWords">Nombre de mots à tester :</label>
-  <input type="number" id="nbWords" min="1">
-  <label for="speed">Vitesse :</label>
-  <select id="speed">
-    <option value="fast">Rapide</option>
-    <option value="normal" selected>Normale</option>
-    <option value="slow">Lente</option>
-  </select>
-  <button id="startSession">Commencer</button>
-  <button id="backToMenu">Retour</button>
-</div>
-
-<div id="quiz" class="hidden">
-  <p id="themeLabel"></p>
-  <p id="progress"></p>
-  <p id="question"></p>
-  <input type="text" id="answer">
-  <div id="feedback"></div>
-  <p id="score"></p>
-  <button id="validate">Valider</button>
-  <button id="skip">Passer</button>
-</div>
-
-<div id="recapSection" class="hidden">
-  <h2>Récapitulatif</h2>
-  <ul id="recap"></ul>
-  <button id="restart">Recommencer</button>
-  <button id="toMenu">Retour au menu</button>
-  <button id="reviewMistakes" class="hidden"></button>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
