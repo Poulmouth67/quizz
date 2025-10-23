@@ -1,0 +1,56 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f8;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 { color: #222; margin-bottom: 6px; }
+h2 { color: #555; font-weight: normal; margin-bottom: 12px; }
+
+.menu .buttons, .config-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0 20px;
+}
+
+.theme-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.theme-btn:hover {
+  background: #007bff; color: white; transform: translateY(-3px);
+}
+
+.hidden { display: none; }
+
+#quiz { max-width: 640px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+
+#answer { padding: 10px; width: 80%; font-size: 16px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc; }
+
+.controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; }
+
+#validate, #skip, #startSession, #backToMenu {
+  padding: 10px 16px; font-size: 15px; border-radius: 8px; border: none; cursor: pointer;
+}
+
+#validate { background: #007bff; color: white; }
+#validate:hover { background: #0056b3; }
+#skip { background: #eee; }
+
+.correct { color: green; font-weight: bold; }
+.wrong { color: red; font-weight: bold; }
+
+.topbar { display:flex; justify-content: space-between; margin-bottom: 6px; max-width: 600px; margin-left:auto; margin-right:auto; }
+#recap { text-align: left; max-width: 700px; margin: 18px auto; }
+#recap li { margin-bottom: 6px; }
