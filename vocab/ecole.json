@@ -1,0 +1,17 @@
+[
+  {"de": "die Schule", "fr": "l’école"},
+  {"de": "der Schüler", "fr": "l’élève (garçon)"},
+  {"de": "die Schülerin", "fr": "l’élève (fille)"},
+  {"de": "der Lehrer", "fr": "le professeur"},
+  {"de": "das Klassenzimmer", "fr": "la salle de classe"},
+  {"de": "das Buch", "fr": "le livre"},
+  {"de": "das Heft", "fr": "le cahier"},
+  {"de": "der Bleistift", "fr": "le crayon"},
+  {"de": "der Kugelschreiber", "fr": "le stylo"},
+  {"de": "das Papier", "fr": "le papier"},
+  {"de": "die Prüfung", "fr": "l’examen"},
+  {"de": "lernen", "fr": "apprendre"},
+  {"de": "lesen", "fr": "lire"},
+  {"de": "schreiben", "fr": "écrire"},
+  {"de": "rechnen", "fr": "compter"}
+]
